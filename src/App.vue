@@ -16,7 +16,7 @@ import SiteFooter from './components/SiteFooter.vue'
 <template>
   <SiteLoader />
   <NavBar />
-  <main class="bg-sand-50">
+  <main>
     <HeroSection />
     <IntroSection />
     <AmenitiesSection />
