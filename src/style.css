@@ -86,3 +86,9 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+/* Hauteur plein écran qui suit la barre d'adresse mobile (100vh en secours) */
+@utility min-h-screen-dynamic {
+  min-height: 100vh;
+  min-height: 100dvh;
+}

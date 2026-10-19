@@ -4,7 +4,7 @@ import AppIcon from './AppIcon.vue'
 </script>
 
 <template>
-  <section id="accueil" class="relative flex min-h-svh items-center justify-center overflow-hidden bg-ocean-950">
+  <section id="accueil" class="relative flex min-h-screen-dynamic items-center justify-center overflow-hidden bg-ocean-950">
     <!-- Photo de fond (si fournie) -->
     <img
       v-if="hero.image.src"
