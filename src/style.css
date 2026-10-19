@@ -41,11 +41,14 @@
 
 @layer base {
   html {
+    background-color: var(--color-ocean-950);
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
   }
   body {
-    @apply bg-sand-50 font-sans text-ocean-950 antialiased;
+    /* Fond bleu nuit : Safari iOS l'utilise pour teinter la barre d'état.
+       Les sections claires reçoivent leur fond crème via <main>. */
+    @apply bg-ocean-950 font-sans text-ocean-950 antialiased;
   }
 }
 
@@ -88,7 +91,14 @@
 }
 
 /* Hauteur plein écran qui suit la barre d'adresse mobile (100vh en secours) */
-@utility min-h-screen-dynamic {
+/* Hero plein écran sur mobile : prend la plus grande hauteur (lvh) pour passer
+   sous la barre d'outils flottante de Safari iOS, et recentre le contenu
+   dans la zone toujours visible (svh). */
+@utility min-h-hero {
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100lvh;
+  padding-bottom: calc(100lvh - 100svh);
+}
+@utility bottom-visible-8 {
+  bottom: calc(2rem + 100lvh - 100svh);
 }

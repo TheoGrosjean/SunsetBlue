@@ -4,7 +4,7 @@ import AppIcon from './AppIcon.vue'
 </script>
 
 <template>
-  <section id="accueil" class="relative flex min-h-screen-dynamic items-center justify-center overflow-hidden bg-ocean-950">
+  <section id="accueil" class="relative flex min-h-hero items-center justify-center overflow-hidden bg-ocean-950">
     <!-- Photo de fond (si fournie) -->
     <img
       v-if="hero.image.src"
@@ -61,7 +61,7 @@ import AppIcon from './AppIcon.vue'
       </div>
     </div>
 
-    <a href="#villa" class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-sand-50/70" aria-label="Défiler vers le bas">
+    <a href="#villa" class="absolute bottom-visible-8 left-1/2 z-10 -translate-x-1/2 text-sand-50/70" aria-label="Défiler vers le bas">
       <span class="block h-12 w-px animate-pulse bg-linear-to-b from-transparent via-gold-300 to-transparent"></span>
     </a>
   </section>

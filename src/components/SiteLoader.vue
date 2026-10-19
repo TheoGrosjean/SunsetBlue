@@ -59,7 +59,7 @@ const word = 'SUNSET BLUE'.split('')
 <template>
   <div
     v-if="visible"
-    class="loader fixed inset-0 z-100 overflow-hidden"
+    class="loader fixed inset-x-0 top-0 z-100 h-lvh overflow-hidden"
     :class="[`loader--${variant}`, { 'is-started': started, 'is-leaving': leaving }]"
     role="status"
     :aria-label="`Chargement de ${villa.name}`"
