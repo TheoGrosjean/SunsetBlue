@@ -18,14 +18,17 @@ import SiteFooter from './components/SiteFooter.vue'
   <NavBar />
   <main>
     <HeroSection />
-    <IntroSection />
-    <AmenitiesSection />
-    <RoomsSection />
-    <GallerySection />
-    <LocationSection />
-    <AirbnbSection />
-    <ReviewsSection />
-    <ContactSection />
+    <!-- Le reste du site défile par-dessus la photo fixe de l'accueil -->
+    <div class="relative bg-sand-50">
+      <IntroSection />
+      <AmenitiesSection />
+      <RoomsSection />
+      <GallerySection />
+      <LocationSection />
+      <AirbnbSection />
+      <ReviewsSection />
+      <ContactSection />
+    </div>
   </main>
-  <SiteFooter />
+  <SiteFooter class="relative" />
 </template>
