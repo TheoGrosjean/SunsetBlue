@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* Charte graphique Sunset Blue Villa — couleurs extraites du logo */
+@theme {
+  --font-script: "Great Vibes", cursive;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+
+  /* Or du lettrage "Sunset" */
+  --color-gold-50: #fbf7ec;
+  --color-gold-100: #f4ead0;
+  --color-gold-200: #e9d5a1;
+  --color-gold-300: #dcbc6c;
+  --color-gold-400: #cfa448;
+  --color-gold-500: #b8893a;
+  --color-gold-600: #966b2c;
+  --color-gold-700: #725024;
+
+  /* Bleu roi du lettrage "Blue" et de l'océan */
+  --color-ocean-50: #eef3ff;
+  --color-ocean-100: #d9e4ff;
+  --color-ocean-300: #7d9df0;
+  --color-ocean-400: #3f6ae0;
+  --color-ocean-500: #1a47c9;
+  --color-ocean-600: #1238a8;
+  --color-ocean-700: #0e2c85;
+  --color-ocean-800: #0b2160;
+  --color-ocean-900: #081840;
+  --color-ocean-950: #050f29;
+
+  /* Coucher de soleil */
+  --color-sunset-300: #ffc26b;
+  --color-sunset-400: #ffa53d;
+  --color-sunset-500: #f28a1e;
+
+  /* Fonds crème / sable */
+  --color-sand-50: #fdfbf7;
+  --color-sand-100: #f8f3ea;
+  --color-sand-200: #efe5d3;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-sand-50 font-sans text-ocean-950 antialiased;
+  }
+}
+
+@utility text-gold-gradient {
+  background-image: linear-gradient(110deg, #966b2c 0%, #dcbc6c 35%, #f4ead0 50%, #cfa448 65%, #966b2c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gold-gradient {
+  background-image: linear-gradient(110deg, #966b2c 0%, #cfa448 40%, #e9d5a1 55%, #b8893a 100%);
+}
+
+@utility eyebrow {
+  @apply font-sans text-xs font-medium uppercase tracking-[0.35em] text-gold-500;
+}
+
+/* Apparition au scroll (voir directive v-reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Variante plus soutenue pour les fonds clairs */
+@utility text-gold-deep {
+  background-image: linear-gradient(110deg, #725024 0%, #b8893a 40%, #cfa448 55%, #966b2c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
