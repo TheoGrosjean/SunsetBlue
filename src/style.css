@@ -67,8 +67,8 @@
 /* Apparition au scroll (voir directive v-reveal) */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .reveal.is-visible {
   opacity: 1;
